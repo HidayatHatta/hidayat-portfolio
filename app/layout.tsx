@@ -8,7 +8,7 @@ const sans = IBM_Plex_Sans({ subsets: ['latin'], weight: ['400', '500', '600'], 
 const mono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--font-mono' });
 
 export const metadata: Metadata = {
-  title: 'Hidayat Hatta Irsyad – Data Portfolio',
+  title: 'Hidayat Hatta Irsyad - Data Portfolio',
   description: 'Informatics graduate interested in Data Engineering & Analytics.',
 };
 

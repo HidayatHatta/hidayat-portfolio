@@ -25,139 +25,171 @@ export type ExperienceItem = {
 };
 
 export const profile = {
-  name: "Hidayat Hatta Irsyad",
-  role: "Data Engineering & Analytics Enthusiast",
-  tagline: "Informatics graduate passionate about building robust ETL pipelines, data warehouses, and actionable analytics systems.",
-  bio: "Informatics graduate from Universitas Riau with strong focus on data engineering, analytics, and backend workflows. Experienced in designing relational schemas, orchestrating scheduled pipelines with Python & SQL, and building scalable data solutions.",
-  cv: "/cv.pdf",
-  email: "hidayat.hatta1397@student.unri.ac.id",
-  github: "https://github.com/hidayathatta",
-  linkedin: "https://linkedin.com/in/hidayathatta",
-  location: "Pekanbaru, Riau, Indonesia",
+  name: 'Hidayat Hatta Irsyad',
+  role: 'Data Enthusiast',
+  tagline: 'Informatics graduate passionate about building robust ETL pipelines, data warehouses, and actionable analytics systems.',
+  bio: 'Informatics graduate from Universitas Riau with strong focus on data engineering, analytics, and backend workflows. Experienced in designing relational schemas, orchestrating scheduled pipelines with Python & SQL, and building scalable data solutions.',
+  cv: '/cv.pdf',
+  email: 'hidayathatta834@gmail.com',
+  github: 'https://github.com/hidayathatta',
+  linkedin: 'https://www.linkedin.com/in/hidayat-hatta-irsyad-36809a279/',
+  location: 'Pekanbaru, Riau, Indonesia',
 };
-
-export const heroPipelineSteps: Step[] = [
-  { name: "Extract Sources", note: "PostgreSQL & REST APIs" },
-  { name: "Validate & Buffer", note: "Kafka & Pydantic" },
-  { name: "Transform & Model", note: "dbt & Apache Airflow" },
-  { name: "Analytics Warehouse", note: "BigQuery / Star Schema" },
-  { name: "BI Visualization", note: "Metabase & Reports" },
-];
 
 export const skillCategories: SkillCategory[] = [
   {
-    title: "Programming & Querying",
-    skills: ["Python", "SQL (PostgreSQL, MySQL)", "TypeScript / JavaScript", "Bash / Shell Scripting"],
+    title: 'Programming & Querying',
+    skills: ['Python', 'SQL (PostgreSQL, MySQL)', 'TypeScript / JavaScript', 'Bash / Shell Scripting'],
   },
   {
-    title: "Data Pipelines & ETL",
-    skills: ["Apache Airflow", "dbt (data build tool)", "Pandas & NumPy", "Apache Kafka (Basics)"],
+    title: 'Data Pipelines & ETL',
+    skills: ['Apache Airflow', 'dbt (data build tool)', 'Pandas & NumPy'],
   },
   {
-    title: "Databases & Storage",
-    skills: ["PostgreSQL", "MySQL", "Google BigQuery", "Redis", "Supabase"],
+    title: 'Databases & Storage',
+    skills: ['PostgreSQL', 'MySQL', 'Oracle Database', 'DuckDB', 'MinIO / S3', 'Parquet'],
   },
   {
-    title: "Tools & DevOps",
-    skills: ["Docker & Docker Compose", "Git & GitHub Actions", "Linux / CLI", "Metabase / Looker Studio"],
+    title: 'Tools & DevOps',
+    skills: ['Docker & Docker Compose', 'Git & GitHub Actions', 'Linux / CLI'],
   },
 ];
 
 export const educationAndExperience: ExperienceItem[] = [
   {
-    roleOrDegree: "Universitas Riau (UNRI) — Bachelor of Computer Science (Informatics)",
-    details: "Graduated with focused coursework in Database Systems, Data Mining, Software Engineering, and Distributed Systems.",
+    roleOrDegree: 'Universitas Riau (UNRI) - Bachelor of Informatics Engineering',
+    details: 'Awarded as the top graduate (Pemuncak 1) at the Faculty of Engineering level for the Bachelor’s degree program, achieving the highest academic performance among graduates in May 2026.',
   },
   {
-    roleOrDegree: "Data Engineering & Analytics Independent Projects",
-    details: "Designed end-to-end data pipelines, star schema data warehouses, and interactive reporting dashboards.",
+    roleOrDegree: 'Laboratory Assistant - Database',
+    details:
+      'Instructed SQL programming laboratory sessions using Oracle Database for undergraduate students. Guided practical implementations of relational database design, query optimization, and advanced SQL commands across DML, DDL, DCL, and TCL.',
   },
   {
-    roleOrDegree: "Open Source & Continuous Learning",
-    details: "Active practitioner in data pipeline architecture, database query optimization, and modern data stack tooling.",
+    roleOrDegree: 'Bangkit Academy Batch 2 (2024) - Machine Learning Cohort ',
+    details:
+      'Completed an intensive Machine Learning program with 905 total learning hours, achieving an average score of 91.40 (Grade A) across all courses. Collaborated with a cross-functional team of 6 members from the Machine Learning, Mobile Development, and Cloud Computing tracks to develop BatikLoka, a mobile application for batik pattern recognition. Performed data preprocessing and data cleaning to ensure dataset quality and consistency. Optimized image classification performance through transfer learning, improving model accuracy during evaluation.',
   },
 ];
 
 export const projects: Project[] = [
   {
-    slug: "e-commerce-etl-pipeline",
-    title: "E-Commerce Ingestion & Star Schema Warehouse",
-    summary: "Automated batch ETL pipeline extracting raw transactional data, executing dbt dimensional modeling, and loading into an analytics warehouse.",
-    stack: ["Python", "Apache Airflow", "PostgreSQL", "dbt", "Docker"],
-    github: "https://github.com/hidayathatta/ecommerce-data-pipeline",
-    problem: "Operational transactional databases were experiencing performance degradation due to ad-hoc analytical queries, with unstandardized customer and revenue metrics across departments.",
+    slug: 'nyc-taxi-weather-analytics',
+    title: 'NYC Taxi & Weather Analytics: End-to-End Data Pipeline',
+    summary:
+      'Built an end-to-end data pipeline processing over 10 million cleaned NYC Yellow Taxi records enriched with hourly weather data, using a medallion architecture, automated orchestration, data quality checks, and an interactive analytics dashboard.',
+
+    stack: ['Python', 'SQL', 'DuckDB', 'Apache Airflow', 'MinIO', 'Parquet', 'Docker Compose', 'Streamlit'],
+
+    github: 'https://github.com/HidayatHatta/medallion-project',
+
+    problem:
+      'Raw taxi trip data alone provides limited context for understanding how weather conditions relate to travel patterns and tipping behavior. The project addresses this by building a reliable, repeatable data pipeline that integrates NYC Yellow Taxi records with hourly weather data, validates data quality, and transforms the results into analytics-ready datasets.',
+
     architecture: [
-      { name: "Raw Ingestion", note: "Airflow DAG & Python" },
-      { name: "Staging Area", note: "PostgreSQL raw schema" },
-      { name: "Dimensional Modeling", note: "dbt transformations" },
-      { name: "Fact & Dim Tables", note: "Optimized Star Schema" },
-      { name: "BI Reporting", note: "Metabase dashboard" },
+      { name: 'Data Ingestion', note: 'Python & MinIO (Bronze Layer)' },
+      { name: 'Data Transformation', note: 'DuckDB & Parquet (Silver Layer)' },
+      { name: 'Data Quality', note: 'Automated Validation Checks' },
+      { name: 'Data Aggregation', note: 'SQL Analytics (Gold Layer)' },
+      { name: 'Orchestration & Dashboard', note: 'Apache Airflow & Streamlit' },
     ],
+
     learned: [
-      "Configured idempotent Airflow DAGs with automatic backfills and alerting mechanisms.",
-      "Modeled Kimball star schemas with fact tables and slowly changing dimensions (SCD).",
-      "Automated schema validation and freshness tests using dbt test suites.",
-      "Containerized multi-service pipeline using Docker Compose.",
+      'Designed an end-to-end data pipeline using a Bronze–Silver–Gold medallion architecture.',
+      'Implemented idempotent ingestion, date-based partitioning, and reproducible monthly processing.',
+      'Applied SQL-based transformations and data modeling with DuckDB and Parquet.',
+      'Built automated data quality checks and audit-before-publish safeguards to improve pipeline reliability.',
+      'Orchestrated dependent tasks and monthly data processing with Apache Airflow.',
+      'Integrated external API data and developed an interactive dashboard for analytical insights.',
     ],
   },
+
   {
-    slug: "realtime-event-streaming",
-    title: "Real-Time Event Streaming & Anomaly Detection",
-    summary: "Event-driven telemetry ingestion engine buffering user interactions with Kafka and detecting activity spikes in real-time.",
-    stack: ["Apache Kafka", "Python", "FastAPI", "Redis", "Docker"],
-    github: "https://github.com/hidayathatta/streaming-log-analytics",
-    problem: "Critical application errors and abnormal activity patterns were only discovered hours after occurrence due to legacy batch log processing.",
+    slug: 'virtual-agent-pelayanan-masyarakat',
+    title: 'Sahabat Kominfo: Public Service Virtual Agent',
+    summary: 'Developed a public service virtual agent to support community access to government service information, integrating a machine learning model with a Python Flask backend through REST APIs for real-time response processing.',
+
+    stack: ['Python', 'Flask', 'REST API', 'Machine Learning', 'NLP'],
+
+    github: 'https://github.com/HidayatHatta/Virtual-Agent-Pelayanana-Masyarakat',
+
+    problem:
+      'Accessing public service information can be challenging when information needs to be delivered efficiently and consistently. This project addresses the challenge by developing a virtual agent that connects users with a machine learning model through a Flask backend, enabling real-time response processing and a structured interaction flow.',
+
     architecture: [
-      { name: "Event Producer", note: "FastAPI REST API" },
-      { name: "Message Broker", note: "Apache Kafka Topics" },
-      { name: "Stream Worker", note: "Python Async Consumer" },
-      { name: "Sliding Window", note: "Redis in-memory caching" },
-      { name: "Alert Trigger", note: "Real-time webhook notification" },
+      {
+        name: 'User Interaction',
+        note: 'Receives User Queries and Sends Requests',
+      },
+      {
+        name: 'Backend Processing',
+        note: 'Python & Flask Application',
+      },
+      {
+        name: 'API Integration',
+        note: 'REST API Communication Between Application and Model',
+      },
+      {
+        name: 'Machine Learning',
+        note: 'Processes Queries and Generates Responses',
+      },
+      {
+        name: 'Response Delivery',
+        note: 'Returns Model Responses to the User in Real Time',
+      },
     ],
+
     learned: [
-      "Implemented Kafka producer-consumer patterns with distinct consumer groups.",
-      "Handled partition balancing, at-least-once delivery guarantees, and backpressure.",
-      "Maintained rolling window aggregations and metric caching in Redis.",
+      'Analyzed system requirements for a public service virtual agent.',
+      'Developed a Python Flask backend and integrated a machine learning model through REST APIs.',
+      'Designed the communication flow between users, the application, and the machine learning model.',
+      'Performed functional testing, debugging, and troubleshooting to improve system reliability.',
+      'Prepared technical documentation covering system architecture, API integration, and implementation procedures.',
     ],
   },
+
   {
-    slug: "market-data-pipeline",
-    title: "Market Intelligence Scraper & Analytics Pipeline",
-    summary: "Automated scheduled web scraping pipeline aggregating financial and commodity pricing data with strict schema validation.",
-    stack: ["Python", "BeautifulSoup4", "Pydantic", "SQLite", "Streamlit"],
-    github: "https://github.com/hidayathatta/market-data-pipeline",
-    problem: "Regional commodity prices were scattered across non-standardized government portals without public APIs, making historical trend analysis tedious.",
+    slug: 'batikloka-batik-pattern-classification',
+    title: 'BatikLoka: Indonesian Batik Pattern Classification',
+    summary:
+      'Developed an image classification model using EfficientNetV2S and TensorFlow to recognize 10 Indonesian batik patterns, collaborating with Mobile Development and Cloud Computing teams to integrate the machine learning model into an application.',
+
+    stack: ['Python', 'TensorFlow', 'EfficientNetV2S', 'Deep Learning', 'Image Classification'],
+
+    github: 'https://github.com/AgusSyuhada/batik-loka',
+
+    problem:
+      'Indonesia has a diverse range of traditional batik patterns that can be difficult to identify visually, especially for users unfamiliar with their characteristics. BatikLoka addresses this challenge by developing a deep learning-based image classification model that recognizes 10 types of Indonesian batik patterns and supports integration into a user-facing application.',
+
     architecture: [
-      { name: "Data Extraction", note: "Automated BS4 crawler" },
-      { name: "Validation", note: "Pydantic schema enforcement" },
-      { name: "Cleaning & Normalization", note: "Pandas pipeline" },
-      { name: "Storage", note: "Indexed SQLite database" },
-      { name: "Dashboard", note: "Streamlit analytics view" },
+      {
+        name: 'Dataset Preparation',
+        note: 'Dataset Preprocessing and Validation',
+      },
+      {
+        name: 'Model Development',
+        note: 'EfficientNetV2S with TensorFlow',
+      },
+      {
+        name: 'Model Evaluation',
+        note: 'Training, Validation, and Classification Performance Assessment',
+      },
+      {
+        name: 'Model Integration',
+        note: 'Collaboration with Mobile Development and Cloud Computing Teams',
+      },
+      {
+        name: 'Application Testing',
+        note: 'Testing Model Integration and Application Functionality',
+      },
     ],
+
     learned: [
-      "Built resilient scrapers with automated retries, user-agent rotation, and error logging.",
-      "Enforced type-safe data validation with Pydantic to catch unexpected web structure changes.",
-      "Generated analytical time-series metrics such as moving averages and price volatility.",
-    ],
-  },
-  {
-    slug: "customer-churn-analytics",
-    title: "Customer Churn Feature Store & Scoring Pipeline",
-    summary: "Analytical feature pipeline calculating RFM (Recency, Frequency, Monetary) metrics and scoring customer retention risks.",
-    stack: ["Python", "Scikit-Learn", "PostgreSQL", "Pandas", "Matplotlib"],
-    github: "https://github.com/hidayathatta/customer-churn-analytics",
-    problem: "A subscription business experienced elevated customer drop-offs because warning signals were buried in raw event logs without centralized feature modeling.",
-    architecture: [
-      { name: "Activity Logs", note: "Raw user session database" },
-      { name: "Feature Engineering", note: "RFM & behavioral transforms" },
-      { name: "Model Training", note: "Random Forest Classifier" },
-      { name: "Daily Scoring", note: "Automated batch inference" },
-      { name: "Action Dashboard", note: "High-risk customer segment export" },
-    ],
-    learned: [
-      "Constructed reusable feature tables from unstructured event timestamps.",
-      "Tackled dataset class imbalance using SMOTE and evaluated performance via PR-AUC and F1-score.",
-      "Automated batch prediction exports to prioritize customer success outreach.",
+      'Collaborated with a multidisciplinary team across Machine Learning, Mobile Development, and Cloud Computing.',
+      'Developed and optimized an EfficientNetV2S image classification model using TensorFlow to recognize 10 Indonesian batik patterns.',
+      'Performed dataset preprocessing and validation to improve data quality before model training.',
+      'Collaborated with Mobile Development and Cloud Computing teams to integrate the trained model into the application.',
+      'Participated in model testing and evaluation to assess classification performance and application requirements.',
     ],
   },
 ];
