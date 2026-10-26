@@ -1,7 +1,7 @@
 import Pipeline from '@/components/Pipeline';
 import HeroBackground from '@/components/HeroBackground';
 import ProjectCard from '@/components/ProjectCard';
-import { profile, heroPipelineSteps, skillCategories, educationAndExperience, projects } from '@/data/projects';
+import { profile, skillCategories, educationAndExperience, projects } from '@/data/projects';
 
 export default function Home() {
   return (
